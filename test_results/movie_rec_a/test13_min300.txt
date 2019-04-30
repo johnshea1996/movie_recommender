@@ -1,0 +1,63 @@
+
+Test 0 - Running for User 737
+Results
+Seen 23 movies
+Average Rating 3.9565217391304346
+3/4 movies were above the average
+
+Test 1 - Running for User 290
+Results
+Seen 140 movies
+Average Rating 3.3214285714285716
+9/10 movies were above the average
+
+Test 2 - Running for User 451
+Results
+Seen 88 movies
+Average Rating 2.7386363636363638
+3/4 movies were above the average
+
+Test 3 - Running for User 876
+Results
+Seen 11 movies
+Average Rating 4.2727272727272725
+1/3 movies were above the average
+
+Test 4 - Running for User 411
+Results
+Seen 48 movies
+Average Rating 3.7291666666666665
+8/10 movies were above the average
+
+Test 5 - Running for User 827
+Results
+Seen 18 movies
+Average Rating 3.2222222222222223
+1/4 movies were above the average
+
+Test 6 - Running for User 208
+Results
+Seen 23 movies
+Average Rating 3.6956521739130435
+0/1 movies were above the average
+
+Test 7 - Running for User 305
+Results
+Seen 212 movies
+Average Rating 3.400943396226415
+5/10 movies were above the average
+
+Test 8 - Running for User 866
+Results
+Seen 10 movies
+Average Rating 2.7
+0/1 movies were above the average
+
+Test 9 - Running for User 312
+Results
+Seen 213 movies
+Average Rating 4.389671361502347
+5/10 movies were above the average
+
+Average result 0.47833333333333333
+Elapsed time 43.522923

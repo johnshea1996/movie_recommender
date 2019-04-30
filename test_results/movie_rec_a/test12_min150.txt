@@ -1,63 +1,63 @@
 
-Test 0 - Running for User 896
+Test 0 - Running for User 314
 Results
-Seen 352 movies
-Average Rating 2.9886363636363638
-10/10 movies were above the average
-
-Test 1 - Running for User 459
-Results
-Seen 108 movies
-Average Rating 3.435185185185185
-7/10 movies were above the average
-
-Test 2 - Running for User 312
-Results
-Seen 213 movies
-Average Rating 4.389671361502347
-9/10 movies were above the average
-
-Test 3 - Running for User 752
-Results
-Seen 63 movies
-Average Rating 3.1904761904761907
-6/10 movies were above the average
-
-Test 4 - Running for User 535
-Results
-Seen 208 movies
-Average Rating 3.9615384615384617
+Seen 235 movies
+Average Rating 3.6808510638297873
 8/10 movies were above the average
 
-Test 5 - Running for User 250
+Test 1 - Running for User 569
 Results
-Seen 112 movies
-Average Rating 3.794642857142857
-9/10 movies were above the average
+Seen 60 movies
+Average Rating 3.45
+7/10 movies were above the average
 
-Test 6 - Running for User 433
-Results
-Seen 31 movies
-Average Rating 3.3870967741935485
-5/7 movies were above the average
-
-Test 7 - Running for User 424
-Results
-Seen 34 movies
-Average Rating 3.2941176470588234
-3/7 movies were above the average
-
-Test 8 - Running for User 78
+Test 2 - Running for User 651
 Results
 Seen 11 movies
 Average Rating 3.3636363636363638
+3/3 movies were above the average
+
+Test 3 - Running for User 86
+Results
+Seen 13 movies
+Average Rating 3.5384615384615383
+1/1 movies were above the average
+
+Test 4 - Running for User 897
+Results
+Seen 175 movies
+Average Rating 3.9314285714285715
+8/10 movies were above the average
+
+Test 5 - Running for User 891
+Results
+Seen 37 movies
+Average Rating 4.216216216216216
 2/3 movies were above the average
 
-Test 9 - Running for User 420
+Test 6 - Running for User 363
 Results
-Seen 26 movies
-Average Rating 4.1923076923076925
-4/6 movies were above the average
+Seen 301 movies
+Average Rating 3.053156146179402
+7/10 movies were above the average
 
-Average result 0.7376190476190476
-Elapsed time 177.363268
+Test 7 - Running for User 515
+Results
+Seen 30 movies
+Average Rating 3.033333333333333
+2/6 movies were above the average
+
+Test 8 - Running for User 258
+Results
+Seen 13 movies
+Average Rating 3.8461538461538463
+1/1 movies were above the average
+
+Test 9 - Running for User 399
+Results
+Seen 309 movies
+Average Rating 2.9352750809061487
+9/10 movies were above the average
+
+Average result 0.79
+Elapsed time 166.736729

@@ -1,3 +1,5 @@
+# movie_rec_a.py
+
 import pandas as pd
 import numpy as np
 import random
@@ -5,7 +7,7 @@ import datetime
 
 pd.set_option("display.max_columns",4)
 
-MIN_RATINGS = 150
+MIN_RATINGS = 250
 # Read movie data into a dataframe
 movie_data = pd.read_csv("../ml-100k/u.item", sep='|', encoding='latin-1',names=['movie_id', 'movie_title'], header=None, usecols=['movie_id','movie_title'])
 # Read in the ratings data into a dataframe
@@ -20,6 +22,7 @@ def get_user_array(udata):
     u = np.array(udata)
     return u
 
+# Calulate the cosine similarity between two different user ratings vectors
 def cosine_similarity(u1, u2):
    return (np.dot(u1,u2))/(np.linalg.norm(u1)*np.linalg.norm(u2))
 
@@ -42,7 +45,7 @@ def get_predicted_rating(tuser,tmid,movie_ratings_data):
         sim_sum += abs(sims[i][1])
     return rating/sim_sum
 
-
+# Take a list of user ratings and return a list of recommended movies on the order of highest to lowest predicted scores
 def rec_movies(user_ratings):
     # Add new user ratings to the new ratings data
     new_ratings_data = ratings_data
@@ -66,6 +69,10 @@ def rec_movies(user_ratings):
     results.sort(key=lambda x: x[1],reverse=True)
     return results
 
+# Take a random user and receive list of recommended movies and
+# calculate up to some number N equal the number of recommended movies
+# that have a real rating of above the user's average rating and
+# return N/K where K is the total number of recommended movies
 def test(tu,out_file):
     # Base ratings
     base_ratings_df = pd.read_csv("../ml-100k/ua.base", sep="\t", names=['user_id', 'movie_id', 'rating'], header=None, usecols=['user_id', 'movie_id', 'rating'])
@@ -90,8 +97,8 @@ def test(tu,out_file):
         if (user_movie_ratings.loc[tu, mid] > 0):
             title = movie_data.loc[mid, 'movie_title']
             true_rating = user_movie_ratings.loc[tu, mid]
-            print(title, true_rating)
-            if(true_rating >= avg_rating):
+            print(title, true_rating,pr)
+            if(true_rating >= (avg_rating-0.1)):
                 above_avg += 1
             count += 1
         if (count >= movies_seen*0.2  or count>=10):
@@ -104,11 +111,15 @@ def test(tu,out_file):
     out_file.write("{}/{} movies were above the average\n".format(above_avg,count))
     return above_avg/count
 
+# - - - - - Testing - - - - -
+
+# Get 10 random users
 test_users = [random.randint(0,943) for i in range(10)]
 results = []
-out_file = open("../test_results/movie_rec_a/test12_min150.txt",'w')
+out_file = open("../test_results/movie_rec_a/test19_min250.txt",'w')
 
 start_time = datetime.datetime.now()
+# For each random user, run user through the testing algorithm and save the results
 for i in range(len(test_users)):
     print("\nTest {} - Running for User {}".format(i,test_users[i]))
     out_file.write("\nTest {} - Running for User {}".format(i,test_users[i]))

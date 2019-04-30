@@ -1,4 +1,4 @@
-# movie_rec_b.py
+# movie_rec_c.py
 
 from surprise import Dataset, Reader
 from surprise.model_selection import cross_validate, train_test_split
@@ -16,8 +16,7 @@ movie_data = pd.read_csv("../ml-100k/u.item", sep='|', encoding='latin-1',names=
 reader = Reader(line_format='user item rating timestamp', sep='\t')
 data = Dataset.load_from_file("../ml-100k/u.data",reader=reader)
 # Choose the SVD Matrix Factorization algorithm
-algo = prediction_algorithms.SVD()
-
+algo = prediction_algorithms.KNNWithMeans()
 # Run a 5-fold cross validation the algorithm ot get the RMSE
 results = cross_validate(algo,data,measures=['rmse','mae'],cv=5, verbose=True)
 
@@ -66,7 +65,7 @@ def test_user_results(tu,predictions,out_file):
 
 
 results = []
-out_file = open("../test_results/movie_rec_b/test10.txt",'w')
+out_file = open("../test_results/movie_rec_c/test10.txt",'w')
 
 # Test the results of the predictions on the test set for 10 randomly selected users
 # who get at least one recommended movie from test set
